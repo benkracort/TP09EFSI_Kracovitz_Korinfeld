@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    gap: 12px;
+}
+
+header img {
+    width: 2%;
+}
+
+#root {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.home {
+    text-align: center;
+}

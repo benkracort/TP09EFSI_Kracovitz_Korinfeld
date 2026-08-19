@@ -1,7 +1,9 @@
+import '../index.css'
+
 export default function Footer() {
     return (
         <footer>
-            {/* Tarea de la boluda de martu */}
+            <p>Copyright &copy; 2026 - Krorify</p>
         </footer>
     )
 }
