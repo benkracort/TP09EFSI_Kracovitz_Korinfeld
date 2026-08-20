@@ -74,22 +74,21 @@ export default function Home() {
                 Buscar
             </button>
 
-            {cargando && <p>Cargando información...</p>}
+            {cargando && <p className="mensaje">Cargando información...</p>}
 
-            {error && <p>{error}</p>}
+            {error && <p className="mensaje error">{error}</p>}
 
             {!cargando && !error && albumes.length === 0 && (
-                <p>No encontramos resultados.</p>
+                <p className="mensaje">No encontramos resultados.</p>
             )}
 
             {!cargando && !error && albumes.length > 0 && (
                 <section>
                     <h2>Resultados</h2>
 
-                    <div>
+                    <div className="albumes-grid">
                         {albumes.map((album) => (
-                            <div key={album.id}>
-
+                            <div className="album-card" key={album.id}>
                                 <div
                                     onClick={() =>
                                         navigate(`/album/${album.id}`)
