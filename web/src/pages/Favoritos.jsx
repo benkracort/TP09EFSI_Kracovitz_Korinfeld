@@ -21,21 +21,23 @@ export default function Favoritos() {
     }
 
     return (
-        <main>
+        <main className="favoritos">
             <h1>Mis favoritos</h1>
 
             {favoritos.length === 0 ? (
-                <p>No tenés álbumes favoritos.</p>
+                <p className="mensaje-favoritos">
+                    No tenés álbumes favoritos.
+                </p>
             ) : (
-                <div>
+                <div className="favoritos-grid">
                     {favoritos.map((album) => (
-                        <div key={album.id}>
+                        <div className="favorito-card" key={album.id}>
 
                             <div
+                                className="favorito-info"
                                 onClick={() =>
                                     navigate(`/album/${album.id}`)
                                 }
-                                style={{ cursor: 'pointer' }}
                             >
                                 <img
                                     src={album.images[0]?.url}
